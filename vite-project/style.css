@@ -5,7 +5,7 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  color: rgba(122, 69, 175, 0.87);
   background-color: #242424;
 
   font-synthesis: none;
@@ -53,7 +53,7 @@ h1 {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
 .logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
+  filter: drop-shadow(0 0 2em #fde825aa);
 }
 
 .card {
@@ -61,7 +61,7 @@ h1 {
 }
 
 .read-the-docs {
-  color: #888;
+  color: rgb(250, 147, 147);
 }
 
 button {
