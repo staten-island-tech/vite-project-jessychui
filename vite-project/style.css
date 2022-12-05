@@ -1,5 +1,5 @@
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Lexend', sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
@@ -86,7 +86,7 @@ button:focus-visible {
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: #ffffff;
+    background-color: #ffbbbb;
   }
   a:hover {
     color: #747bff;
@@ -94,4 +94,39 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: hsl(0, 79%, 7%);
+    background-color: #cf1111;
+    font-family: 'Diplomata SC', cursive;
+    
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #3a4626;
+  }
+}
+
+.browser {
+  width: 15px;
+  margin: 5px;
+  transition: .75s;
+}
+
+.browser:hover {
+  filter: grayscale(65%);
+}
+
+.browserthing {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.toggle {
+  margin: auto;
 }
