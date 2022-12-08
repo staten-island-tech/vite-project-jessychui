@@ -1,35 +1,12 @@
-:root {
-  font-family: 'Lexend', sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(122, 69, 175, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
   margin: 0;
   display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  font-family: 'Lexend', sans-serif;
+  color: #213547;
+    background-color: #ffbbbb;
 }
 
 h1 {
@@ -44,26 +21,6 @@ h1 {
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #fde825aa);
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: rgb(250, 147, 147);
-}
-
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -71,45 +28,28 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #d2bdbd;
   cursor: pointer;
   transition: border-color 0.25s;
 }
-button:hover {
-  border-color: #646cff;
-}
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
+.lightmode {
     color: #213547;
     background-color: #ffbbbb;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+    font-family: 'Lexend', sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
+.darkmode {
     color: hsl(0, 79%, 7%);
     background-color: #cf1111;
     font-family: 'Diplomata SC', cursive;
-    
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #3a4626;
-  }
-}
+
 
 .browser {
   width: 15px;
@@ -123,10 +63,20 @@ button:focus-visible {
 
 .browserthing {
   position: absolute;
-  top: 15px;
-  left: 15px;
+  top: 2%;
+  left: 2%;
 }
 
 .toggle {
-  margin: auto;
+  padding: auto;
+  position: absolute;
+  top: 8%;
+  left: 30%;
+  font-size: 90%;
+}
+
+h1{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
