@@ -13,10 +13,24 @@ const rats = {
     </p>
   </a>
 `; */
+let mode = "lightmode";
 
-rats.toggle.addEventListener("change", function () {
-  rats.toggle.classList.add("darkmode");
+rats.toggle.addEventListener("click", function () {
+  if (mode === "lightmode") {
+    rats.toggle.classList.add("darkmode");
+    title.classList.add("darkmode");
+    document.body.style.backgroundColor = "rgb(207, 17, 17)";
+    mode = "darkmode";
+    return mode;
+  }
+  if (mode === "darkmode") {
+    rats.toggle.classList.remove("darkmode");
+    title.classList.remove("darkmode");
+    document.body.style.backgroundColor = "rgb(255, 187, 187)";
+    mode = "lightmode";
+    return mode;
+  }
 });
-
 let app = document.getElementById("app");
-app.insertAdjacentHTML("afterend", `<h1>Rat Acountants</h1>`);
+app.insertAdjacentHTML("afterend", `<h1 id="title">Rat Acountants</h1>`);
+let title = document.getElementById("title");

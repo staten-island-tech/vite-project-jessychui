@@ -28,7 +28,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #d2bdbd;
+  background-color: #fff5f5;
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -40,14 +40,15 @@ button:focus-visible {
 
 .lightmode {
     color: #213547;
-    background-color: #ffbbbb;
+    background-color: rgb(255, 187, 187);
     font-family: 'Lexend', sans-serif;
 }
 
 .darkmode {
     color: hsl(0, 79%, 7%);
-    background-color: #cf1111;
+    background-color: rgb(207, 17, 17);
     font-family: 'Diplomata SC', cursive;
+    
   }
 
 
@@ -79,4 +80,5 @@ h1{
   position: absolute;
   left: 50%;
   transform: translate(-50%, -50%);
+  top: 20%;
 }
