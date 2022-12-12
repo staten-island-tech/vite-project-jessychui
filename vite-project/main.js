@@ -1,6 +1,8 @@
 import "./style.css";
 const rats = {
   toggle: document.getElementById("toggleswitch"),
+  app: document.getElementById("app"),
+  title: document.getElementById("title"),
 };
 
 /* document.querySelector("#app").innerHTML = `
@@ -8,10 +10,6 @@ const rats = {
     <div class="card">
       <button id="counter" type="button"></button>
     </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </a>
 `; */
 let mode = "lightmode";
 
@@ -20,6 +18,8 @@ rats.toggle.addEventListener("click", function () {
     rats.toggle.classList.add("darkmode");
     title.classList.add("darkmode");
     document.body.style.backgroundColor = "rgb(207, 17, 17)";
+    title.innerHTML = "Rat CarteL";
+    rats.toggle.innerHTML = "dark";
     mode = "darkmode";
     return mode;
   }
@@ -27,10 +27,11 @@ rats.toggle.addEventListener("click", function () {
     rats.toggle.classList.remove("darkmode");
     title.classList.remove("darkmode");
     document.body.style.backgroundColor = "rgb(255, 187, 187)";
+    title.innerHTML = "Rat Accountants";
+    rats.toggle.innerHTML = "light";
     mode = "lightmode";
     return mode;
   }
 });
-let app = document.getElementById("app");
-app.insertAdjacentHTML("afterend", `<h1 id="title">Rat Acountants</h1>`);
-let title = document.getElementById("title");
+
+app.insertAdjacentHTML("afterend", ``);
