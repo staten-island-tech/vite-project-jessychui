@@ -20,6 +20,9 @@ rats.toggle.addEventListener("click", function () {
     document.body.style.backgroundColor = "rgb(207, 17, 17)";
     title.innerHTML = "Rat CarteL";
     rats.toggle.innerHTML = "dark";
+    rats.toggle.style.backgroundColor = "rgb(12, 73, 73)";
+    rats.toggle.style.width = "90px";
+    rats.toggle.style.height = "50px";
     mode = "darkmode";
     return mode;
   }
@@ -29,6 +32,8 @@ rats.toggle.addEventListener("click", function () {
     document.body.style.backgroundColor = "rgb(255, 187, 187)";
     title.innerHTML = "Rat Accountants";
     rats.toggle.innerHTML = "light";
+    rats.toggle.style.backgroundColor = "#fff5f5";
+    rats.toggle.style.width = "50px";
     mode = "lightmode";
     return mode;
   }
