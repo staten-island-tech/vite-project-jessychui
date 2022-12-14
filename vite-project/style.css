@@ -80,7 +80,6 @@ h1{
   top: 25%;
   width: 100%;
   text-align: center;
-  
 }
 
 .container {
@@ -89,13 +88,21 @@ h1{
   gap: 40px;
   justify-content: space-evenly;
   padding: 10px;
+  width: 75em;
 }
 
 .card { 
-  padding: 50px;
-  background-color: aliceblue;
+  padding: 5%;
+  background-color: rgba(255, 227, 227, 0.688);
+  width: 15em;
+  align-content: center;
 }
 
-img {
-  width: 50px;
+h2 {
+  
+}
+
+.accountants {
+  height: 5em;
+  align-self: auto;
 }
