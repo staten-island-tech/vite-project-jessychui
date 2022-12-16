@@ -1,8 +1,10 @@
 import "./style.css";
+import "./accountants.js";
 const rats = {
   toggle: document.getElementById("toggleswitch"),
   app: document.getElementById("app"),
   title: document.getElementById("title"),
+  container: document.getElementById("container"),
 };
 
 /* document.querySelector("#app").innerHTML = `
@@ -38,5 +40,12 @@ rats.toggle.addEventListener("click", function () {
     return mode;
   }
 });
+
+rats.container.innerHTML( "afterend",
+      '<div class="card">
+        <h2>George</h2>
+        <img class="accountants" src="media/calc1.png" alt="calculator rat" >
+      </div>'
+);
 
 app.insertAdjacentHTML("afterend", ``);
