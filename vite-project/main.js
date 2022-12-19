@@ -1,10 +1,11 @@
 import "./style.css";
-import "./accountants.js";
+import { accountants } from "./accountants";
 const rats = {
   toggle: document.getElementById("toggleswitch"),
   app: document.getElementById("app"),
   title: document.getElementById("title"),
   container: document.getElementById("container"),
+  elsome: document.getElementById("elsome"),
 };
 
 /* document.querySelector("#app").innerHTML = `
@@ -41,11 +42,20 @@ rats.toggle.addEventListener("click", function () {
   }
 });
 
-rats.container.innerHTML( "afterend",
-      '<div class="card">
-        <h2>George</h2>
-        <img class="accountants" src="media/calc1.png" alt="calculator rat" >
-      </div>'
-);
-
 app.insertAdjacentHTML("afterend", ``);
+
+// rats.container.innerHTML = `<div class="card">
+// <h2>George</h2>
+// <img class="accountants" src="/calc1.png" alt="calculator rat" >
+// </div>`;
+
+accountants.forEach((rat) => {
+  console.log(rat.name);
+  rats.elsome.insertAdjacentHTML(
+    "beforeend",
+    `<div class="card">
+  <h2>${rat.name}</h2>
+  <img class="accountants" src="${rat.img}" alt="calculator rat" >
+  </div>`
+  );
+});
