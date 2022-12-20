@@ -2,6 +2,7 @@ import "./style.css";
 import { accountants } from "./accountants";
 const rats = {
   toggle: document.getElementById("toggleswitch"),
+
   app: document.getElementById("app"),
   title: document.getElementById("title"),
   container: document.getElementById("container"),
@@ -54,8 +55,15 @@ accountants.forEach((rat) => {
   rats.elsome.insertAdjacentHTML(
     "beforeend",
     `<div class="card">
-  <h2>${rat.name}</h2>
-  <img class="accountants" src="${rat.img}" alt="calculator rat" >
+    <div class="content">
+      <div class="front">
+        <h2>${rat.name}</h2>
+        <img class="accountants" src="${rat.img}" alt="calculator rat" >
+      </div>
+      <div class="back">
+        <p class="info">rating : ${rat.rating} <br><br>pricing : ${rat.pricing} <br><br>description : ${rat.description} </p>
+      </div>
+    </div>
   </div>`
   );
 });

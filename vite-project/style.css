@@ -15,7 +15,7 @@ h1 {
 }
 
 
-button {
+#toggleswitch {
   border-radius: 8px;
   border: 1px solid transparent;
   height: 40px;
@@ -25,14 +25,6 @@ button {
   font-family: inherit;
   background-color: #fff5f5;
   cursor: pointer;
-  position: absolute;
-  right: 20%;
-  transition: border-color 0.25s;
-}
-
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
 .lightmode {
@@ -77,19 +69,27 @@ h1{
   position: absolute;
   left: 50%;
   transform: translate(-50%, -50%);
-  top: 25%;
+  top: 15%;
   width: 100%;
   text-align: center;
 }
 
+/* #container {
+  width:auto
+} */
 #elsome {
+  position: absolute;
+  left: 50%;
+  top: 90%;
+  transform: translate(-50%, -50%);
   display: flex;
   flex-flow: row wrap;
   gap: 40px;
   justify-content: space-evenly;
   padding: 10px;
-  width: 75em;
+  width: 75vw;
   height: 75em;
+  
 }
 
 .card { 
@@ -99,14 +99,19 @@ h1{
 }
 
 h2 {
-  
+  text-align: center;
 }
 
 .accountants {
-  height: 5em;
+  height: 7em;
   display: block;
   align-self: auto;
   position: relative;
   margin-left: auto;
   margin-right: auto;
+
+}
+
+.info {
+
 }
