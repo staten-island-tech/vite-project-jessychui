@@ -2,11 +2,13 @@ import "./style.css";
 import { accountants } from "./accountants";
 const rats = {
   toggle: document.getElementById("toggleswitch"),
-
   app: document.getElementById("app"),
   title: document.getElementById("title"),
   container: document.getElementById("container"),
   elsome: document.getElementById("elsome"),
+  cheap: document.getElementById("cheap"),
+  expensive: document.getElementById("expensive"),
+  loser: document.getElementById("loser"),
 };
 
 /* document.querySelector("#app").innerHTML = `
@@ -49,21 +51,30 @@ app.insertAdjacentHTML("afterend", ``);
 // <h2>George</h2>
 // <img class="accountants" src="/calc1.png" alt="calculator rat" >
 // </div>`;
-
-accountants.forEach((rat) => {
-  console.log(rat.name);
-  rats.elsome.insertAdjacentHTML(
-    "beforeend",
-    `<div class="card">
-    <div class="content">
-      <div class="front">
-        <h2>${rat.name}</h2>
-        <img class="accountants" src="${rat.img}" alt="calculator rat" >
+function makecards() {
+  accountants.forEach((rat) => {
+    /* console.log(rat.name); */
+    rats.elsome.insertAdjacentHTML(
+      "beforeend",
+      `<div class="card">
+      <div class="content">
+        <div class="front">
+          <h2>${rat.name}</h2>
+          <img class="accountants" src="${rat.img}" alt="calculator rat" >
+        </div>
+        <div class="back">
+          <p class="info">rating : ${rat.rating} <br><br>pricing : ${rat.pricing} <br><br>description : ${rat.description} </p>
+        </div>
       </div>
-      <div class="back">
-        <p class="info">rating : ${rat.rating} <br><br>pricing : ${rat.pricing} <br><br>description : ${rat.description} </p>
-      </div>
-    </div>
-  </div>`
-  );
+    </div>`
+    );
+  });
+}
+makecards();
+rats.loser.addEventListener("click", function () {
+  rats.elsome.innerHTML = "";
+  // makecards();
+  accountants
+    .filter((rat) => rat.pricing.includes === " Flat Fee")
+    .forEach((rat) => console.log(rat.name));
 });

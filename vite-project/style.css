@@ -65,6 +65,11 @@ h1 {
   font-size: 90%;
 }
 
+.sort {
+  position: absolute;
+  top: 50px;
+}
+
 h1{
   position: absolute;
   left: 50%;
@@ -95,7 +100,7 @@ h1{
 .card { 
   padding: 5%;
   background-color: rgba(255, 227, 227, 0.688);
-  width: 15em;
+  width: 23em;
 }
 
 h2 {
@@ -103,13 +108,15 @@ h2 {
 }
 
 .accountants {
-  height: 7em;
+  height: 12em;
   display: block;
   align-self: auto;
   position: relative;
   margin-left: auto;
   margin-right: auto;
-
+  padding: 10px;
+  background-color: #ff66666e;
+  border-radius: 10px;
 }
 
 .info {

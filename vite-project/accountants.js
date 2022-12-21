@@ -53,9 +53,9 @@ let accountants = [
   {
     name: "Bogdan",
     rating: -3,
-    pricing: "6 cents/hr",
-    description: "😐",
-    img: "/tutor.png",
+    pricing: ["2¢", " Flat Fee"],
+    description: "😐 he's absolutely TRASH",
+    img: "/bogdan.png",
   },
   {
     name: "Mr. Bombastic",
