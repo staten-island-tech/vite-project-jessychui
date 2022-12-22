@@ -60,16 +60,41 @@ h1 {
 .toggle {
   padding: auto;
   position: absolute;
-  top: 8%;
-  left: 30%;
   font-size: 90%;
+  right: 20px;
+  top: 20px;
+}
+
+/* #cheap {
+  position: absolute;
+  top: 50px;
+  margin-left: 50px;
+}
+
+#expensive {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+}
+
+#loser {
+  position: absolute;
+  top: 50px;
+  margin-left: 220px;
+} */
+
+.filters {
+  position: absolute;
+  top: 90px;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .sort {
-  position: absolute;
-  top: 50px;
-}
+  padding: 10px;
+  border-radius: 8px;
 
+}
 h1{
   position: absolute;
   left: 50%;

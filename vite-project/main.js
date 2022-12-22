@@ -51,30 +51,48 @@ app.insertAdjacentHTML("afterend", ``);
 // <h2>George</h2>
 // <img class="accountants" src="/calc1.png" alt="calculator rat" >
 // </div>`;
-function makecards() {
-  accountants.forEach((rat) => {
-    /* console.log(rat.name); */
-    rats.elsome.insertAdjacentHTML(
-      "beforeend",
-      `<div class="card">
+
+accountants.forEach((rat) => {
+  /* console.log(rat.name); */
+  rats.elsome.insertAdjacentHTML(
+    "beforeend",
+    `<div class="card">
       <div class="content">
         <div class="front">
           <h2>${rat.name}</h2>
           <img class="accountants" src="${rat.img}" alt="calculator rat" >
         </div>
         <div class="back">
-          <p class="info">rating : ${rat.rating} <br><br>pricing : ${rat.pricing} <br><br>description : ${rat.description} </p>
+          <p class="info">rating : ${rat.rating} <br><br>pricing : $${rat.pricing}/hr <br><br>description : ${rat.description} </p>
         </div>
       </div>
     </div>`
-    );
-  });
-}
-makecards();
+  );
+});
+
+let filteredcardsopen = false;
+
+function makefilteredcards() {}
 rats.loser.addEventListener("click", function () {
   rats.elsome.innerHTML = "";
   // makecards();
   accountants
-    .filter((rat) => rat.pricing.includes === " Flat Fee")
-    .forEach((rat) => console.log(rat.name));
+    .filter((rat) => rat.pricing < 10)
+    .forEach((rat) => {
+      /* console.log(rat.name); */
+      rats.elsome.insertAdjacentHTML(
+        "beforeend",
+        `<div class="card">
+        <div class="content">
+          <div class="front">
+            <h2>${rat.name}</h2>
+            <img class="accountants" src="${rat.img}" alt="calculator rat" >
+          </div>
+          <div class="back">
+            <p class="info">rating : ${rat.rating} <br><br>pricing : $${rat.pricing}/hr <br><br>description : ${rat.description} </p>
+          </div>
+        </div>
+      </div>`
+      );
+    });
 });
