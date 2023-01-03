@@ -23,12 +23,13 @@ rats.toggle.addEventListener("click", function () {
   if (mode === "lightmode") {
     rats.toggle.classList.add("darkmode");
     title.classList.add("darkmode");
-    document.body.style.backgroundColor = "rgb(207, 17, 17)";
+    document.body.style.backgroundColor = "rgb(17, 18, 17)";
     title.innerHTML = "Rat CarteL";
     rats.toggle.innerHTML = "dark";
-    rats.toggle.style.backgroundColor = "rgb(12, 73, 73)";
+    rats.toggle.style.backgroundColor = "rgb(111, 68, 68)";
     rats.toggle.style.width = "90px";
     rats.toggle.style.height = "50px";
+    rats.toggle.style.fontFamily = "'Diplomata SC', cursive";
     mode = "darkmode";
     return mode;
   }
@@ -40,6 +41,7 @@ rats.toggle.addEventListener("click", function () {
     rats.toggle.innerHTML = "light";
     rats.toggle.style.backgroundColor = "#fff5f5";
     rats.toggle.style.width = "50px";
+    rats.toggle.style.fontFamily = "'Lexend'";
     mode = "lightmode";
     return mode;
   }
@@ -70,29 +72,152 @@ accountants.forEach((rat) => {
   );
 });
 
-let filteredcardsopen = false;
+let cheapfilter = false;
 
-function makefilteredcards() {}
-rats.loser.addEventListener("click", function () {
-  rats.elsome.innerHTML = "";
-  // makecards();
-  accountants
-    .filter((rat) => rat.pricing < 10)
-    .forEach((rat) => {
-      /* console.log(rat.name); */
-      rats.elsome.insertAdjacentHTML(
-        "beforeend",
-        `<div class="card">
-        <div class="content">
-          <div class="front">
-            <h2>${rat.name}</h2>
-            <img class="accountants" src="${rat.img}" alt="calculator rat" >
+rats.cheap.addEventListener("click", function () {
+  if (cheapfilter === false) {
+    rats.elsome.innerHTML = "";
+    accountants
+      .filter((rat) => rat.pricing < 60)
+      .forEach((rat) => {
+        rats.elsome.insertAdjacentHTML(
+          "beforeend",
+          `<div class="card">
+          <div class="content">
+            <div class="front">
+              <h2>${rat.name}</h2>
+              <img class="accountants" src="${rat.img}" alt="calculator rat" >
+            </div>
+            <div class="back">
+              <p class="info">rating : ${rat.rating} <br><br>pricing : $${rat.pricing}/hr <br><br>description : ${rat.description} </p>
+            </div>
           </div>
-          <div class="back">
-            <p class="info">rating : ${rat.rating} <br><br>pricing : $${rat.pricing}/hr <br><br>description : ${rat.description} </p>
-          </div>
-        </div>
-      </div>`
+        </div>`
       );
     });
+    cheapfilter = true;
+  return cheapfilter;
+  }
+
+  if (cheapfilter === true) {
+    rats.elsome.innerHTML = "";
+    accountants
+      .forEach((rat) => {
+        rats.elsome.insertAdjacentHTML(
+          "beforeend",
+          `<div class="card">
+          <div class="content">
+            <div class="front">
+              <h2>${rat.name}</h2>
+              <img class="accountants" src="${rat.img}" alt="calculator rat" >
+            </div>
+            <div class="back">
+              <p class="info">rating : ${rat.rating} <br><br>pricing : $${rat.pricing}/hr <br><br>description : ${rat.description} </p>
+            </div>
+          </div>
+        </div>`
+      );
+    });
+    cheapfilter = false
+  return cheapfilter }
+});
+
+let expensivefilter = false;
+
+rats.expensive.addEventListener("click", function () {
+  if (expensivefilter === false) {
+    rats.elsome.innerHTML = "";
+    accountants
+      .filter((rat) => rat.pricing > 60)
+      .forEach((rat) => {
+        rats.elsome.insertAdjacentHTML(
+          "beforeend",
+          `<div class="card">
+          <div class="content">
+            <div class="front">
+              <h2>${rat.name}</h2>
+              <img class="accountants" src="${rat.img}" alt="calculator rat" >
+            </div>
+            <div class="back">
+              <p class="info">rating : ${rat.rating} <br><br>pricing : $${rat.pricing}/hr <br><br>description : ${rat.description} </p>
+            </div>
+          </div>
+        </div>`
+      );
+    });
+    expensivefilter = true;
+  return expensivefilter;
+  }
+
+  if (expensivefilter === true) {
+    rats.elsome.innerHTML = "";
+    accountants
+      .forEach((rat) => {
+        rats.elsome.insertAdjacentHTML(
+          "beforeend",
+          `<div class="card">
+          <div class="content">
+            <div class="front">
+              <h2>${rat.name}</h2>
+              <img class="accountants" src="${rat.img}" alt="calculator rat" >
+            </div>
+            <div class="back">
+              <p class="info">rating : ${rat.rating} <br><br>pricing : $${rat.pricing}/hr <br><br>description : ${rat.description} </p>
+            </div>
+          </div>
+        </div>`
+      );
+    });
+    expensivefilter = false
+  return expensivefilter }
+});
+
+let loserfilter = false;
+
+rats.loser.addEventListener("click", function () {
+  if (loserfilter === false) {
+    rats.elsome.innerHTML = "";
+    accountants
+      .filter((rat) => rat.pricing < 10)
+      .forEach((rat) => {
+        rats.elsome.insertAdjacentHTML(
+          "beforeend",
+          `<div class="card">
+          <div class="content">
+            <div class="front">
+              <h2>${rat.name}</h2>
+              <img class="accountants" src="${rat.img}" alt="calculator rat" >
+            </div>
+            <div class="back">
+              <p class="info">rating : ${rat.rating} <br><br>pricing : $${rat.pricing}/hr <br><br>description : ${rat.description} </p>
+            </div>
+          </div>
+        </div>`
+      );
+    });
+    loserfilter = true;
+  return loserfilter;
+  }
+
+  if (loserfilter === true) {
+    rats.elsome.innerHTML = "";
+    accountants
+      .forEach((rat) => {
+        rats.elsome.insertAdjacentHTML(
+          "beforeend",
+          `<div class="card">
+          <div class="content">
+            <div class="front">
+              <h2>${rat.name}</h2>
+              <img class="accountants" src="${rat.img}" alt="calculator rat" >
+            </div>
+            <div class="back">
+              <p class="info">rating : ${rat.rating} <br><br>pricing : $${rat.pricing}/hr <br><br>description : ${rat.description} </p>
+            </div>
+          </div>
+        </div>`
+      );
+    });
+    loserfilter = false
+  return loserfilter }
 });

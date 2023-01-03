@@ -47,15 +47,8 @@ let accountants = [
     rating: 100000,
     pricing: 350,
     description:
-      "Wise beyond their years... hides an unsettling seret behind the berries they devour",
+      "Wise beyond their years... hides an unsettling secret behind the berries they devour",
     img: "/strawberry.jpg",
-  },
-  {
-    name: "Bogdan",
-    rating: -3,
-    pricing: 1,
-    description: "😐 he's absolutely TRASH",
-    img: "/bogdan.png",
   },
   {
     name: "Mr. Bombastic",
@@ -63,6 +56,13 @@ let accountants = [
     pricing: 145,
     description: "Most requested accountant, deservedly so",
     img: "/addition.png",
+  },
+  {
+    name: "Bogdan",
+    rating: -3,
+    pricing: 1,
+    description: "😐 he's absolutely TRASH",
+    img: "/bogdan.png",
   },
 ];
 
