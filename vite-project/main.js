@@ -30,6 +30,17 @@ rats.toggle.addEventListener("click", function () {
     rats.toggle.style.width = "90px";
     rats.toggle.style.height = "50px";
     rats.toggle.style.fontFamily = "'Diplomata SC', cursive";
+    rats.elsome.style.fontFamily = "'Vollkorn SC', serif";
+    rats.elsome.style.fontWeight = "bold";
+    rats.cheap.style.fontFamily = "'Vollkorn SC', serif";
+    rats.expensive.style.fontFamily = "'Vollkorn SC', serif";
+    rats.loser.style.fontFamily = "'Vollkorn SC', serif";
+    rats.cheap.style.backgroundColor = "rgb(104, 34, 34)";
+    rats.expensive.style.backgroundColor = "rgb(104, 34, 34)";
+    rats.loser.style.backgroundColor = "rgb(104, 34, 34)";
+    rats.cheap.style.color = "rgb(255, 255, 255)";
+    rats.expensive.style.color = "rgb(255, 255, 255)";
+    rats.loser.style.color = "rgb(255, 255, 255)";
     mode = "darkmode";
     return mode;
   }
@@ -42,6 +53,17 @@ rats.toggle.addEventListener("click", function () {
     rats.toggle.style.backgroundColor = "#fff5f5";
     rats.toggle.style.width = "50px";
     rats.toggle.style.fontFamily = "'Lexend'";
+    rats.elsome.style.fontFamily = "'Lexend'";
+    rats.elsome.style.fontWeight = "normal";
+    rats.cheap.style.fontFamily = "'Lexend'";
+    rats.expensive.style.fontFamily = "'Lexend'";
+    rats.loser.style.fontFamily = "'Lexend'";
+    rats.cheap.style.backgroundColor = "rgb(255, 255, 255)";
+    rats.expensive.style.backgroundColor = "rgb(255, 255, 255)";
+    rats.loser.style.backgroundColor = "rgb(255, 255, 255)";
+    rats.cheap.style.color = "rgb(33, 53, 71)";
+    rats.expensive.style.color = "rgb(33, 53, 71)";
+    rats.loser.style.color = "rgb(33, 53, 71)";
     mode = "lightmode";
     return mode;
   }
